@@ -1,6 +1,6 @@
 package interview.demo.entity;
 
 public interface Image {
-    float getArea();
+    double getArea();
     boolean save();
 }

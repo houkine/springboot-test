@@ -1,10 +1,17 @@
 package interview.demo.service;
-import interview.demo.service.impl.sharps.*;
-import interview.demo.entity.Sharp;
+import java.util.List;
+
 import interview.demo.entity.Sharp;
 
 public interface SharpService {
     // boolean SaveImage(String name, SharpParam sp);
-    boolean SaveImage(String name);
+    boolean SaveImage(
+        String shape,
+        Integer sideA,
+        Integer sideB,
+        Integer radius,
+        String unit
+    );
     
+    double CalculateArea(long id);
 }

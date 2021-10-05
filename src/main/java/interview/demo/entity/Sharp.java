@@ -9,6 +9,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @Entity
 @Table(name = "Sharp")
 // @Data
+// @Getter
+// @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Sharp{
@@ -16,27 +18,33 @@ public class Sharp{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private long id;
+    public void setId(long id) {this.id=id;}
+    public long getId() {return this.id;}
 
     @Column(name = "name")
-    // @JsonProperty(value = "sideA")
+    // @Getter @Setter
     private String name;
-    public String getName(){
-        return name;
-    }
+    public void setName(String name) {this.name=name;}
+    public String getName() {return this.name;}
 
     @Column(name = "sideA")
-    // @JsonProperty(value = "sideA")
-    private int sideA;
+    protected Integer sideA;
+    public void setSideA(Integer sideA) {this.sideA=sideA;}
+    public Integer getSideA() {return this.sideA;}
 
     @Column(name = "sideB")
-    // @JsonProperty(value = "sideB")
-    private int sideB;
+    protected Integer sideB;
+    public void setSideB(Integer sideB) {this.sideB=sideB;}
+    public Integer getSideB() {return this.sideB;}
     
     @Column(name = "radius")
-    // @JsonProperty(value = "radius")
-    private int radius;
+    protected Integer radius;
+    public void setRadius(Integer radius) {this.radius=radius;}
+    public Integer getRadius() {return this.radius;}
 
     @Column(name = "unit")
-    // @JsonProperty(value = "unit")
-    private String unit;
+    protected String unit;
+    public void setUnit(String unit) {this.unit=unit;}
+    public String getUnit() {return this.unit;}
+
 }

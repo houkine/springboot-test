@@ -3,10 +3,10 @@ package interview.demo.entity;
 import javax.persistence.Entity;
 
 @Entity
-public class Square extends Sharp implements Image{
+public class Rectangle extends Sharp implements Image{
 
     public double getArea(){
-        return sideA*sideA;
+        return sideA*sideB;
     }
     public boolean save(){
         return true;
